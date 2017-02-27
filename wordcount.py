@@ -2,8 +2,8 @@
 
 word_count_dict = {}
 
-def get_words():
-    new_file = open("test.txt")
+def get_words(file_name):
+    new_file = open(file_name)
     for line in new_file:
         new_line = line.rstrip()
         words = new_line.split(" ")
@@ -12,9 +12,9 @@ def get_words():
     # for key in word_count_dict:
     #     print "{} {}".format(key, word_count_dict[key])
 
-    for word, count in word_count_dict.items():
-        print "{} {}".format(word,count)
+    for word, count in word_count_dict.iteritems():
+        print "{} {}".format(word, count)
 
 
 
-get_words()
+get_words("twain.txt")
